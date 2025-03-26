@@ -20,7 +20,7 @@ const quiz = [
         category:"HTML",
         question: "What is the purpose of using div tags in HTML?",
         choices: ["For creating Different styles", "For creating different sectons.","For adding headings.","For adding titles."],
-        answer: "For creating different sections.",
+        answer: "For creating different sectons.",
      },
      {
         category:"HTML",
@@ -41,7 +41,7 @@ const quiz = [
         category:"HTML",
         question: "Which among the following is correct HTML code for making a checkbox?",
       choices: ["<checkbox>", "<input type='checkox'>","<check>","<input type='check'>"],
-        answer: "<input type='checkbox'>",
+        answer: "<input type='checkox'>",
     },{
         category:"HTML",
         question: "Which tag is used for creating a drop-down selection list?",
@@ -67,7 +67,7 @@ const quiz = [
     },{
         category:"CSS",
         question: "Which of the below CSS class is used to change the text color of CSS ?",
-       choices:["background-color", "olor","color-background","textcolor"],
+       choices:["background-color", "color","color-background","textcolor"],
         answer: "color",
     },{
         category:"CSS",
@@ -275,7 +275,8 @@ const showQuestions = () => {
 
     const QuestionObject = filteredQuestions[currentQuestion];
     question.textContent = QuestionObject.question;
-    choices.innerHTML = ""; // Clear previous choices
+    choices.innerHTML = ""; 
+    +
 
     QuestionObject.choices.forEach(choice => {
         const choiceDiv = document.createElement("div");
@@ -289,7 +290,7 @@ const showQuestions = () => {
         });
     });
 
-    startTimer(); // Start timer for the question
+    startTimer(); 
 };
 
 
@@ -301,7 +302,7 @@ const checkAns = () => {
         return;
     }
 
-    clearInterval(timerInterval); // Stop timer after answer selection
+    clearInterval(timerInterval); 
 
     if (selectedChoice.textContent === filteredQuestions[currentQuestion].answer) {
         displayAlert("Correct Answer!");
@@ -343,9 +344,9 @@ let time = 15;
 let timerInterval;
 
 const startTimer = () => {
-    clearInterval(timerInterval); // Clear any previous timer
-    time = 15; // Reset time
-    timer.textContent = time; // Display initial time
+    clearInterval(timerInterval); 
+    time = 15; 
+    timer.textContent = time;
 
     timerInterval = setInterval(() => {
         time--;
@@ -397,7 +398,7 @@ submit.addEventListener("click", () => {
     if (quizOver) {
         submit.textContent = "Submit";
         scoreCard.textContent = "";
-        selectedCategory = ""; // Reset category
+        selectedCategory = ""; 
         currentQuestion = 0;
         quizOver = false;
         score = 0;

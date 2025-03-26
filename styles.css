@@ -11,9 +11,7 @@ body{
     height: 100vh;
     color: white;
 }
-/* .startbox{
-   
-} */
+
 .questionbox{
     display: none;
 }
@@ -83,7 +81,7 @@ h3{
 }
 .Subject.select{
     background-color: blueviolet;
-    color: white; /* Optional: Better contrast */
+    color: white; 
 }
 
 #submit,#start{
@@ -135,7 +133,7 @@ h3{
 @media screen and (max-width: 768px) {
     .quiz-Container {
         width: 90%;
-        /* height: auto; */
+        height: auto;
         padding: 15px;
     }
 
@@ -171,7 +169,7 @@ h3{
 @media screen and (max-width: 480px) {
     .quiz-Container {
         width: 95%;
-        /* height: auto; */
+        height: auto;
     }
 
     .question {
